@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipria · Resumen</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="tablero">
+  <aside class="lateral" id="lateral" data-seccion="resumen"></aside>
+
+  <main class="contenido">
+    <div class="encabezado">
+      <h1>Resumen del negocio</h1>
+      <label>
+        <span class="oculto-visual">Período del gráfico</span>
+        <select id="periodo">
+          <option value="3">Últimos 3 meses</option>
+          <option value="6" selected>Últimos 6 meses</option>
+          <option value="12">Últimos 12 meses</option>
+        </select>
+      </label>
+    </div>
+
+    <section class="indicadores" aria-label="Indicadores del mes">
+      <article class="tarjeta indicador">
+        <p class="etiqueta">Ventas del mes</p>
+        <p class="valor" id="ind-ventas">…</p>
+        <p class="nota" id="ind-ventas-nota"></p>
+      </article>
+      <article class="tarjeta indicador">
+        <p class="etiqueta">Ticket promedio</p>
+        <p class="valor" id="ind-ticket">…</p>
+      </article>
+      <article class="tarjeta indicador">
+        <p class="etiqueta">Margen de ganancia</p>
+        <p class="valor" id="ind-margen">…</p>
+      </article>
+      <article class="tarjeta indicador">
+        <p class="etiqueta">Productos con stock crítico</p>
+        <p class="valor" id="ind-critico">…</p>
+      </article>
+    </section>
+
+    <div class="grilla-2">
+      <section class="tarjeta">
+        <h2>Ventas por mes</h2>
+        <div id="grafico-meses" class="estado-carga">Cargando…</div>
+        <p class="ayuda">Hacé clic en un mes para ver sus ventas por categoría.</p>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Estado del stock</h2>
+        <ul class="lista-stock" id="lista-stock"></ul>
+        <ul class="leyenda vertical">
+          <li><span class="punto normal"></span>Normal: más del doble del mínimo</li>
+          <li><span class="punto atencion"></span>Atención: entre el mínimo y el doble</li>
+          <li><span class="punto critico"></span>Crítico: igual o menor al mínimo</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="/js/tablero.js"></script>
+  <script src="/js/resumen.js"></script>
+</body>
+</html>

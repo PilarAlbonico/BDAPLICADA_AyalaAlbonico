@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipria · Proveedores</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="tablero">
+  <aside class="lateral" id="lateral" data-seccion="proveedores"></aside>
+
+  <main class="contenido">
+    <div class="encabezado">
+      <h1>Proveedores y reposición</h1>
+    </div>
+
+    <div class="grilla-2">
+      <section class="tarjeta tabla-scroll">
+        <h2>Proveedores</h2>
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>Proveedor</th>
+              <th class="num">Órdenes</th>
+              <th class="num">Comprado</th>
+              <th>Pendiente</th>
+            </tr>
+          </thead>
+          <tbody id="filas"><tr><td colspan="4" class="vacio">Cargando…</td></tr></tbody>
+        </table>
+        <p class="ayuda">"Comprado" suma las órdenes que no fueron canceladas.</p>
+      </section>
+
+      <section class="tarjeta">
+        <h2>A reponer ya</h2>
+        <ul class="lista-stock" id="lista-reponer"></ul>
+        <ul class="leyenda vertical">
+          <li><span class="punto critico"></span>Stock igual o menor al mínimo</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="/js/tablero.js"></script>
+  <script src="/js/proveedores.js"></script>
+</body>
+</html>

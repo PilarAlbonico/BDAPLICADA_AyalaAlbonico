@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipria · Crear cuenta</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="ingreso">
+  <main>
+    <h1>Cipria</h1>
+    <p class="subtitulo">Creá tu cuenta para entrar al tablero de ventas.</p>
+    <form id="formulario-registro">
+      <p class="error" id="mensaje-error" role="alert"></p>
+
+      <label for="usuario">Usuario</label>
+      <input id="usuario" name="usuario" type="text" autocomplete="username" required autofocus>
+
+      <label for="clave">Contraseña (mínimo 6 caracteres)</label>
+      <input id="clave" name="clave" type="password" autocomplete="new-password" required>
+
+      <label for="repetir">Repetir contraseña</label>
+      <input id="repetir" name="repetir" type="password" autocomplete="new-password" required>
+
+      <button type="submit" id="boton-enviar">Crear cuenta</button>
+
+      <p class="enlace-alterno">
+        ¿Ya tenés cuenta? <a href="/">Ingresar</a>
+      </p>
+    </form>
+  </main>
+  <script src="/js/registro.js"></script>
+</body>
+</html>

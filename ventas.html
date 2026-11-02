@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipria · Ventas</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="tablero">
+  <aside class="lateral" id="lateral" data-seccion="ventas"></aside>
+
+  <main class="contenido">
+    <div class="encabezado">
+      <div>
+        <p class="migas">Categorías</p>
+        <h1>Ventas por categoría</h1>
+      </div>
+      <label>
+        <span class="oculto-visual">Mes</span>
+        <select id="mes"></select>
+      </label>
+    </div>
+
+    <section class="tarjeta">
+      <h2>Monto vendido</h2>
+      <div id="grafico-categorias" class="estado-carga">Cargando…</div>
+      <p class="ayuda">Hacé clic en una categoría para ver sus productos.</p>
+    </section>
+  </main>
+
+  <script src="/js/tablero.js"></script>
+  <script src="/js/ventas.js"></script>
+</body>
+</html>

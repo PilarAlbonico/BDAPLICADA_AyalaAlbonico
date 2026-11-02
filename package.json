@@ -1,0 +1,15 @@
+{
+  "name": "cipria-ingreso",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "usuarios": "node crearUsuarios.js",
+    "start": "node servidor.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql2": "^3.11.0"
+  }
+}

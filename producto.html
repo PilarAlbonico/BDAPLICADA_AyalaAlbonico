@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipria · Detalle de ventas</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="tablero">
+  <aside class="lateral" id="lateral" data-seccion="ventas"></aside>
+
+  <main class="contenido">
+    <div class="encabezado">
+      <div>
+        <nav class="migas" aria-label="Ruta">
+          <a id="miga-categorias" href="/ventas">Categorías</a> ›
+          <a id="miga-categoria" href="/ventas">…</a> ›
+          <span aria-current="page" id="miga-producto">…</span>
+        </nav>
+        <h1>Detalle de ventas</h1>
+        <p class="bajada" id="bajada"></p>
+      </div>
+      <a class="boton-secundario" id="volver" href="/ventas">← Volver</a>
+    </div>
+
+    <section class="indicadores" aria-label="Totales del producto">
+      <article class="tarjeta indicador">
+        <p class="etiqueta">Unidades vendidas</p>
+        <p class="valor" id="ind-unidades">…</p>
+      </article>
+      <article class="tarjeta indicador">
+        <p class="etiqueta">Monto total</p>
+        <p class="valor" id="ind-monto">…</p>
+      </article>
+      <article class="tarjeta indicador">
+        <p class="etiqueta">Stock actual</p>
+        <p class="valor" id="ind-stock">…</p>
+        <p class="nota" id="ind-stock-nota"></p>
+      </article>
+    </section>
+
+    <section class="tarjeta tabla-scroll">
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Venta</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+            <th class="num">Cant.</th>
+            <th>Medio de pago</th>
+            <th class="num">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="filas"><tr><td colspan="6" class="vacio">Cargando…</td></tr></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/js/tablero.js"></script>
+  <script src="/js/producto.js"></script>
+</body>
+</html>

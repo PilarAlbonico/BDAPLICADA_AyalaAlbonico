@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipria · Clientes</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="tablero">
+  <aside class="lateral" id="lateral" data-seccion="clientes"></aside>
+
+  <main class="contenido">
+    <div class="encabezado">
+      <h1>Clientes</h1>
+      <label>
+        <span class="oculto-visual">Buscar cliente</span>
+        <input class="buscador" id="buscar" type="search" placeholder="Buscar cliente…" autocomplete="off">
+      </label>
+    </div>
+
+    <section class="indicadores" aria-label="Clientes por actividad">
+      <article class="tarjeta indicador">
+        <p class="etiqueta"><span class="punto activa"></span>Clientes activas</p>
+        <p class="valor" id="ind-activas">…</p>
+      </article>
+      <article class="tarjeta indicador">
+        <p class="etiqueta"><span class="punto riesgo"></span>En riesgo</p>
+        <p class="valor" id="ind-riesgo">…</p>
+      </article>
+      <article class="tarjeta indicador">
+        <p class="etiqueta"><span class="punto inactiva"></span>Inactivas</p>
+        <p class="valor" id="ind-inactivas">…</p>
+      </article>
+    </section>
+
+    <section class="tarjeta tabla-scroll">
+      <h2>Mejores clientes</h2>
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Instagram</th>
+            <th class="num">Compras</th>
+            <th class="num">Total gastado</th>
+            <th class="num">Última compra</th>
+            <th>Actividad</th>
+          </tr>
+        </thead>
+        <tbody id="filas"><tr><td colspan="6" class="vacio">Cargando…</td></tr></tbody>
+      </table>
+      <ul class="leyenda">
+        <li><span class="punto activa"></span>Activa: compró en los últimos 30 días</li>
+        <li><span class="punto riesgo"></span>En riesgo: entre 31 y 90 días</li>
+        <li><span class="punto inactiva"></span>Inactiva: más de 90 días</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="/js/tablero.js"></script>
+  <script src="/js/clientes.js"></script>
+</body>
+</html>

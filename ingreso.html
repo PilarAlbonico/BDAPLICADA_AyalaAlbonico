@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipria · Ingresar</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="ingreso">
+  <main>
+    <h1>Cipria</h1>
+    <p class="subtitulo">Ingresá para ver el tablero de ventas.</p>
+    <form id="formulario-ingreso">
+      <p class="error" id="mensaje-error" role="alert"></p>
+
+      <label for="usuario">Usuario</label>
+      <input id="usuario" name="usuario" type="text" autocomplete="username" required autofocus>
+
+      <label for="clave">Contraseña</label>
+      <input id="clave" name="clave" type="password" autocomplete="current-password" required>
+
+      <button type="submit" id="boton-enviar">Ingresar</button>
+
+      <p class="enlace-alterno">
+        ¿No tenés cuenta? <a href="/registro">Crear cuenta</a>
+      </p>
+    </form>
+  </main>
+  <script src="/js/ingreso.js"></script>
+</body>
+</html>
